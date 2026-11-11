@@ -1,0 +1,102 @@
+{
+  "config": {
+    "duration_s": 3.0,
+    "small_tenants": 50,
+    "large_tasks": 30000,
+    "report_threads": 6,
+    "shared_pool": 4,
+    "silo_pool": 2,
+    "seed": 7,
+    "mitigation": {
+      "concurrency_cap": 2,
+      "rate_tokens_per_s": 100,
+      "report_cost_tokens": 10
+    }
+  },
+  "results": [
+    {
+      "pattern": "pooled",
+      "mitigated": false,
+      "small_p50_ms": 106.96,
+      "small_p95_ms": 180.8,
+      "small_p99_ms": 233.39,
+      "small_mean_ms": 102.5,
+      "small_ops": 1111,
+      "small_rejected": 0,
+      "reports": 77,
+      "reports_rejected": 0,
+      "report_p50_ms": 196.4,
+      "duration_s": 3.0
+    },
+    {
+      "pattern": "pooled",
+      "mitigated": true,
+      "small_p50_ms": 0.39,
+      "small_p95_ms": 1.87,
+      "small_p99_ms": 3.3,
+      "small_mean_ms": 0.62,
+      "small_ops": 4341,
+      "small_rejected": 0,
+      "reports": 35,
+      "reports_rejected": 130,
+      "report_p50_ms": 147.2,
+      "duration_s": 3.0
+    },
+    {
+      "pattern": "bridge",
+      "mitigated": false,
+      "small_p50_ms": 72.66,
+      "small_p95_ms": 148.62,
+      "small_p99_ms": 188.26,
+      "small_mean_ms": 73.84,
+      "small_ops": 1403,
+      "small_rejected": 0,
+      "reports": 124,
+      "reports_rejected": 0,
+      "report_p50_ms": 126.5,
+      "duration_s": 3.0
+    },
+    {
+      "pattern": "bridge",
+      "mitigated": true,
+      "small_p50_ms": 0.43,
+      "small_p95_ms": 2.8,
+      "small_p99_ms": 6.35,
+      "small_mean_ms": 0.86,
+      "small_ops": 4315,
+      "small_rejected": 0,
+      "reports": 35,
+      "reports_rejected": 177,
+      "report_p50_ms": 92.1,
+      "duration_s": 3.0
+    },
+    {
+      "pattern": "silo",
+      "mitigated": false,
+      "small_p50_ms": 0.38,
+      "small_p95_ms": 18.31,
+      "small_p99_ms": 31.69,
+      "small_mean_ms": 2.6,
+      "small_ops": 4123,
+      "small_rejected": 0,
+      "reports": 65,
+      "reports_rejected": 0,
+      "report_p50_ms": 264.9,
+      "duration_s": 3.0
+    },
+    {
+      "pattern": "silo",
+      "mitigated": true,
+      "small_p50_ms": 0.42,
+      "small_p95_ms": 17.37,
+      "small_p99_ms": 39.29,
+      "small_mean_ms": 3.03,
+      "small_ops": 4077,
+      "small_rejected": 0,
+      "reports": 35,
+      "reports_rejected": 164,
+      "report_p50_ms": 96.7,
+      "duration_s": 3.0
+    }
+  ]
+}

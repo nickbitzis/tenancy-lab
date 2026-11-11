@@ -1,0 +1,800 @@
+{
+  "canary": "CANARY-VICTIM-7f3a",
+  "runs": [
+    {
+      "backend": "pooled",
+      "planted_bug": false,
+      "attacks": 27,
+      "leaks": 0,
+      "leaked_attacks": [],
+      "results": [
+        {
+          "attack": "forged_tenant_header",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "forged_subdomain",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "header_subdomain_mismatch",
+          "category": "tenant resolution",
+          "status": 400,
+          "leaked": false,
+          "detail": "400, nothing of the victim's"
+        },
+        {
+          "attack": "tampered_token_claim",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "unsigned_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "no_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_project",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_task",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_project_tasks",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_comments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_attachments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_task",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_delete_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_comment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_attachment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_task_into_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "body_tenant_id_injection",
+          "category": "IDOR write",
+          "status": 201,
+          "leaked": false,
+          "detail": "201, nothing of the victim's"
+        },
+        {
+          "attack": "list_projects",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "list_users",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "bulk_export",
+          "category": "bulk export",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_canary",
+          "category": "search",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_wildcard",
+          "category": "search",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "report_summary",
+          "category": "reports",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_result",
+          "category": "background jobs",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_idor",
+          "category": "background jobs",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "victim_data_unchanged",
+          "category": "integrity",
+          "status": null,
+          "leaked": false,
+          "detail": "victim checksums identical"
+        }
+      ]
+    },
+    {
+      "backend": "bridge",
+      "planted_bug": false,
+      "attacks": 27,
+      "leaks": 0,
+      "leaked_attacks": [],
+      "results": [
+        {
+          "attack": "forged_tenant_header",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "forged_subdomain",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "header_subdomain_mismatch",
+          "category": "tenant resolution",
+          "status": 400,
+          "leaked": false,
+          "detail": "400, nothing of the victim's"
+        },
+        {
+          "attack": "tampered_token_claim",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "unsigned_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "no_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_project",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_task",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_project_tasks",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_comments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_attachments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_task",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_delete_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_comment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_attachment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_task_into_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "body_tenant_id_injection",
+          "category": "IDOR write",
+          "status": 201,
+          "leaked": false,
+          "detail": "201, nothing of the victim's"
+        },
+        {
+          "attack": "list_projects",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "list_users",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "bulk_export",
+          "category": "bulk export",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_canary",
+          "category": "search",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_wildcard",
+          "category": "search",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "report_summary",
+          "category": "reports",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_result",
+          "category": "background jobs",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_idor",
+          "category": "background jobs",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "victim_data_unchanged",
+          "category": "integrity",
+          "status": null,
+          "leaked": false,
+          "detail": "victim checksums identical"
+        }
+      ]
+    },
+    {
+      "backend": "silo",
+      "planted_bug": false,
+      "attacks": 27,
+      "leaks": 0,
+      "leaked_attacks": [],
+      "results": [
+        {
+          "attack": "forged_tenant_header",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "forged_subdomain",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "header_subdomain_mismatch",
+          "category": "tenant resolution",
+          "status": 400,
+          "leaked": false,
+          "detail": "400, nothing of the victim's"
+        },
+        {
+          "attack": "tampered_token_claim",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "unsigned_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "no_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_project",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_task",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_project_tasks",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_comments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_attachments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_task",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_delete_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_comment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_attachment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_task_into_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "body_tenant_id_injection",
+          "category": "IDOR write",
+          "status": 201,
+          "leaked": false,
+          "detail": "201, nothing of the victim's"
+        },
+        {
+          "attack": "list_projects",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "list_users",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "bulk_export",
+          "category": "bulk export",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_canary",
+          "category": "search",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_wildcard",
+          "category": "search",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "report_summary",
+          "category": "reports",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_result",
+          "category": "background jobs",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_idor",
+          "category": "background jobs",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "victim_data_unchanged",
+          "category": "integrity",
+          "status": null,
+          "leaked": false,
+          "detail": "victim checksums identical"
+        }
+      ]
+    },
+    {
+      "backend": "pooled",
+      "planted_bug": true,
+      "attacks": 27,
+      "leaks": 2,
+      "leaked_attacks": [
+        "search_canary",
+        "search_wildcard"
+      ],
+      "results": [
+        {
+          "attack": "forged_tenant_header",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "forged_subdomain",
+          "category": "tenant resolution",
+          "status": 403,
+          "leaked": false,
+          "detail": "403, nothing of the victim's"
+        },
+        {
+          "attack": "header_subdomain_mismatch",
+          "category": "tenant resolution",
+          "status": 400,
+          "leaked": false,
+          "detail": "400, nothing of the victim's"
+        },
+        {
+          "attack": "tampered_token_claim",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "unsigned_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "no_token",
+          "category": "tenant resolution",
+          "status": 401,
+          "leaked": false,
+          "detail": "401, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_project",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_get_task",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_project_tasks",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_comments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_list_attachments",
+          "category": "IDOR read",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_task",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_patch_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_delete_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_comment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_attachment",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "idor_post_task_into_project",
+          "category": "IDOR write",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "body_tenant_id_injection",
+          "category": "IDOR write",
+          "status": 201,
+          "leaked": false,
+          "detail": "201, nothing of the victim's"
+        },
+        {
+          "attack": "list_projects",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "list_users",
+          "category": "listing",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "bulk_export",
+          "category": "bulk export",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "search_canary",
+          "category": "search",
+          "status": 200,
+          "leaked": true,
+          "detail": "response contains canary, prj_9a035089706c, tsk_4afa98ab512e"
+        },
+        {
+          "attack": "search_wildcard",
+          "category": "search",
+          "status": 200,
+          "leaked": true,
+          "detail": "response contains canary, prj_9a035089706c, tsk_4afa98ab512e"
+        },
+        {
+          "attack": "report_summary",
+          "category": "reports",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_result",
+          "category": "background jobs",
+          "status": 200,
+          "leaked": false,
+          "detail": "200, nothing of the victim's"
+        },
+        {
+          "attack": "background_job_idor",
+          "category": "background jobs",
+          "status": 404,
+          "leaked": false,
+          "detail": "404, nothing of the victim's"
+        },
+        {
+          "attack": "victim_data_unchanged",
+          "category": "integrity",
+          "status": null,
+          "leaked": false,
+          "detail": "victim checksums identical"
+        }
+      ]
+    }
+  ]
+}

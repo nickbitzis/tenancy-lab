@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Lint
+        run: |
+          uvx ruff check .
+          uvx ruff format --check .
+      - name: Test
+        run: uv run --python 3.12 --group dev pytest -q
+
+  isolation-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Red team on all backends (fails on any cross-tenant leak)
+        run: uv run --python 3.12 tenancylab redteam --backend all
+      - name: Planted bug must be caught (fails if the suite misses it)
+        env:
+          TENANCYLAB_PLANTED_BUG: "1"
+        run: uv run --python 3.12 tenancylab redteam --backend pooled --planted-bug --expect-leaks
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: [test, isolation-gate]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t tenancy-lab:ci .
+      - name: Smoke test container
+        run: |
+          docker run -d --name tl -p 8875:8875 -e TENANCYLAB_ADMIN_KEY=ci-admin tenancy-lab:ci
+          for i in $(seq 1 30); do curl -sf http://localhost:8875/healthz && break; sleep 1; done
+          curl -sf http://localhost:8875/admin/tenants | grep -q quillfeather-bank
+          curl -sf http://localhost:8875/metrics | grep -q tenancylab_tenants
+          docker rm -f tl

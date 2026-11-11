@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tenancy Lab</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Tenancy Lab</h1>
+      <p class="sub">One project management API built three ways: pooled tables, a schema per tenant (bridge), and a database per tenant (silo).</p>
+    </div>
+    <nav class="links"><a href="/docs">API docs</a><a href="/metrics">/metrics</a><a href="/healthz">/healthz</a></nav>
+  </header>
+
+  <main>
+    <section class="tiles" id="tiles" aria-label="Summary"></section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Noisy neighbor: small tenant latency</h2>
+        <p class="note" id="noisy-note"></p>
+      </div>
+      <div class="legend" id="noisy-legend"></div>
+      <div class="multiples" id="noisy"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Tenants</h2>
+        <p class="note">The demo fleet is a hybrid: small tenants pooled, mid-size on bridge, enterprise on silo.</p>
+      </div>
+      <div class="table-scroll"><table id="tenants"></table></div>
+    </section>
+
+    <div class="two">
+      <section class="card">
+        <div class="card-head">
+          <h2>Migration progress</h2>
+          <p class="note">Rolling runs to the latest schema. A failed unit stops the run; resume retries it and skips finished units.</p>
+        </div>
+        <div id="migrations"></div>
+        <h3>Effort for 200 tenants, v1 to v4, one failure and a resume</h3>
+        <div class="table-scroll"><table id="effort"></table></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Cost per tenant per month</h2>
+          <p class="note">Tenant count on the x axis, monthly cost per tenant on the y axis, both log scale. Assumptions are in the README and at /admin/cost.</p>
+        </div>
+        <div class="legend" id="cost-legend"></div>
+        <div id="cost" class="chart"></div>
+        <div class="table-scroll"><table id="cost-table"></table></div>
+      </section>
+    </div>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Isolation red team</h2>
+        <p class="note" id="iso-note"></p>
+      </div>
+      <div class="table-scroll"><table id="isolation"></table></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h2>Operations log</h2></div>
+      <ul class="events" id="events"></ul>
+    </section>
+  </main>
+  <div class="tooltip" id="tip" role="tooltip" hidden></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

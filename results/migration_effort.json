@@ -1,0 +1,47 @@
+{
+  "latest": 4,
+  "results": [
+    {
+      "pattern": "pooled",
+      "tenants": 200,
+      "units": 1,
+      "ddl_statements": 3,
+      "migration_ms": 3.0,
+      "wall_ms": 6.4,
+      "failed_at": "shared",
+      "done_before_failure": 0,
+      "resumed_from": 0,
+      "final_status": "done",
+      "all_on_latest": true,
+      "tenants_blocked_per_unit": 200
+    },
+    {
+      "pattern": "bridge",
+      "tenants": 200,
+      "units": 200,
+      "ddl_statements": 600,
+      "migration_ms": 6941.2,
+      "wall_ms": 6984.3,
+      "failed_at": "t0100",
+      "done_before_failure": 100,
+      "resumed_from": 100,
+      "final_status": "done",
+      "all_on_latest": true,
+      "tenants_blocked_per_unit": 1
+    },
+    {
+      "pattern": "silo",
+      "tenants": 200,
+      "units": 200,
+      "ddl_statements": 600,
+      "migration_ms": 123.0,
+      "wall_ms": 134.0,
+      "failed_at": "t0100",
+      "done_before_failure": 100,
+      "resumed_from": 100,
+      "final_status": "done",
+      "all_on_latest": true,
+      "tenants_blocked_per_unit": 1
+    }
+  ]
+}
